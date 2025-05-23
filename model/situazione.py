@@ -4,15 +4,15 @@ from dataclasses import dataclass
 
 @dataclass
 class Situazione:
-    localita: str
-    data: datetime.date
-    umidita: int
+    Localita: str
+    Data: datetime.date
+    Umidita: int
 
     def __eq__(self, other):
-        return self.localita == other.localita and self.data == other.data
+        return self.Localita == other.Localita and self.Data == other.Data
 
     def __hash__(self):
-        return hash((self.localita, self.data))
+        return hash((self.Localita, self.Data))
 
     def __str__(self):
-        return f"[{self.localita} - {self.data}] Umidità = {self.umidita}"
+        return f"[{self.Localita} - {self.Data}] Umidità = {self.Umidita}"
